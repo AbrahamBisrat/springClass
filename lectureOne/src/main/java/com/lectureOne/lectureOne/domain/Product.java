@@ -3,6 +3,8 @@ package com.lectureOne.lectureOne.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 public class Product {
@@ -11,5 +13,7 @@ public class Product {
     private String name;
     private float price;
 
-//    private List<Review> reviewList;
+    private List<Review> reviewList;
+
+
 }

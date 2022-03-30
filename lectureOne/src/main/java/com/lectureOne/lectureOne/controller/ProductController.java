@@ -1,8 +1,7 @@
-package com.lectureOne.lectureOne.Controller;
+package com.lectureOne.lectureOne.controller;
 
 
 import com.lectureOne.lectureOne.domain.Product;
-import com.lectureOne.lectureOne.domain.Review;
 import com.lectureOne.lectureOne.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,12 +19,14 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
-
     @GetMapping
     public List<Product> getProduct(){
-//        return new Product(111, "Iphone", 1100))
-//        return null;
-        return p
+        return productService.getAll();
+    }
+
+    @GetMapping("/toodloo")
+    public String toodloo(){
+        return "Abebe beso bela!";
     }
 
 }
